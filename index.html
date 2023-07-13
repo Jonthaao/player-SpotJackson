@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link abaixo colocado para nao solicitar favicon icon / não retornar erro no console-->
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <title>Spot Jackson</title>
+
+    <style>
+      .current-song {
+          color: #ff93f6;
+      }
+  </style>
+  </head>
+
+  <body>
+
+    <audio autoplay>
+      <source src="./music/wow.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="player">
+      <div class="player-content-lista">
+        <div class="lista-musicas">
+          <h4 id="Title_App_List">Playlist</h4>
+          <br>
+          <ol id="lista" class="lista"></ol>
+        </div>
+      </div>
+      <div class="player-content">
+        <div id="Title_App">
+          <figure>
+            <img class="gif" src="./image/logo_MJ.gif" alt="">
+          </figure>
+          <!-- Spot Jackson mudar para h1 por ser titulo -->
+        </div>
+        <audio id="music-player" src=""></audio>
+        <div id="imagem-musica" class="img-musica"></div>
+        <!-- style="background-image: url('./image/jean.base64');" -->
+        <div class="detalhes-musicas">
+          <h2 id="titulo-musica">Nome Música</h2>
+          <h5 id="titulo-artista">Nome Artista</h5>
+        </div>
+        <div class="controles">
+          <button id="random-btn" class="troca-musica">
+            <img
+              src="./icons/random/icons8-embaralhar-gradient-32.png"
+              alt=""
+            />
+          </button>
+
+          <button id="prev-btn" class="troca-musica">
+            <img src="./icons/back/icons8-início-gradient-32.png" alt="" />
+          </button>
+
+          <button id="playPause-btn">
+            <img
+              class="play-icone"
+              src="./icons/play/reproduzir32.png"
+              alt=""
+            />
+          </button>
+
+          <button id="next-btn" class="troca-musica">
+            <img src="./icons/fwd/icons8-fim-gradient-32.png" alt="" />
+          </button>
+
+          <button class="btn-volume" id="btn-volume">
+            <img src="./icons/vol_medio/vol_medio32.png" class="icone-volume" />
+            <input
+              hidden
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+              class="volume"
+            />
+          </button>
+        </div>
+        <div class="barra">
+          <div
+            class="barra-progresso"
+            style="background-color: #8a2be2; border-radius: 5px"
+          >
+            <div class="progresso"></div>
+          </div>
+          <div class="tempo">
+            <span id="tempo-atual">00:00</span>
+            <span id="duracao">00:00</span>
+          </div>
+        </div>
+        <div class="proxima-musica">
+          <p>
+            A seguir: <span id="musica-a-seguir">Proxima musica</span> by
+            <span id="artista-a-seguir"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <ul class="lista" id="lista"></ul>
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

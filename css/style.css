@@ -1,0 +1,237 @@
+:root {
+    --preto: black;
+    --preto-rgba: rgba(0, 0, 0, 0.8);
+    --branco: white;
+    --cinza-escuro: #333;
+    --rosa-claro: #ff93f6;
+    --roxo-escuro-rgba: rgba(155, 29, 194, 0.6);
+    --roxo-claro: #8a2be2;
+    --pessego: peachpuff;
+    --azul-rgba: rgba(45, 133, 192, 0.63);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* background-size: 500% 200%;
+     */
+    background-size: 600% 100%;
+
+}
+
+@keyframes changecolor {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#Title_App {
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: "Caprasimo", cursive;
+    margin-top: 10px;
+    font-size: 50px;
+    background-image: linear-gradient(to bottom right, var(--rosa-claro), var(--branco));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--preto);
+}
+
+#Title_App_List{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-family: "Caprasimo", cursive;
+    margin-top: 10px;
+    font-size: 50px;
+    background-image: linear-gradient(to bottom right, var(--rosa-claro), var(--branco));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: .3px var(--preto);
+}
+
+
+.player {
+    /*Alinhando player no centro*/
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: .5rem;
+}
+
+.player-content
+
+/* Fundo do player*/
+    {
+    background-color: var(--branco);
+    padding: 50px 50px;
+    width: 400px;
+    height: 750px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 8px 8px var(--preto-rgba);
+}
+
+.player-content-lista
+
+/* Fundo do player-lista*/
+    {
+    background-color: var(--branco);
+    padding-top: 50px;
+    width: 400px;
+    height: 750px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 8px 8px var(--preto-rgba);
+    align-items: center;
+    justify-content: center;
+}
+
+.img-musica {
+    background: url("https://placehold.it/500") no-repeat center center / cover;
+    position: relative;
+    display: block;
+    /* margin: 0 auto; */
+    width: 300px;
+    height: 270px;
+    background-color: var(--cinza-escuro);
+    border-radius: 2%;
+    box-shadow: 5px 5px 20px var(--roxo-escuro-rgba);
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    gap: 2rem;
+}
+
+.controles img:hover {
+    background-color: var(--pessego);
+    border-radius: 50%;
+}
+
+.detalhes-musicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 115px;
+}
+
+.tempo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.barra {
+    width: 100%;
+    cursor: pointer;
+}
+
+.barra-progesso {
+    height: 8px;
+    background-color: var(--roxo-claro);
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.progresso {
+    height: 8px;
+    background-color: var(--azul-rgba);
+    border-radius: 10px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+p {
+    font-size: 13px;
+    height: 30px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.volume {
+    width: 100px;
+    cursor: pointer;
+    transform: rotate(-90deg) translate(65px, -35px);
+    position: absolute;
+}
+
+.lista {
+    color: var(--cinza-escuro);
+}
+
+.lista-musicas ol {
+    padding: 0px 35px;
+}
+
+.btn-lista {
+    font-size: 17px;
+    cursor: pointer;
+    padding: 2px 10px 15px 10px;
+    font-family: "Caprasimo", cursive;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.btn-lista:hover {
+    color: var(--rosa-claro);
+}
+
+h4 {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    font-style: italic;
+
+}
+.gif {
+    width: 250px;
+    height: 125px;
+    text-align: center;
+  }
+
+  #titulo-musica
+  {
+      text-align: center;
+  }
+  
